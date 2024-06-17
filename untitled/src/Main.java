@@ -18,10 +18,19 @@ class BankAccount {
             previousTransactions = amount;
         }
     }
-    void withdrawl (int amount) {
+    void withdraw (int amount) {
         if (amount != 0) {
             balance -= amount;
-            previousTransactions = amount;
+            previousTransactions = -amount;
         }
+    }
+    void getPreviousTransaction() {
+        if (previousTransactions > 0)
+            System.out.println("Deposited:" + previousTransactions);
+        else if (previousTransactions < 0)
+            System.out.println("Withdrawn:" + Math.abs(previousTransactions));
+        else
+            System.out.println("No transactions have occured");
+    }
 
 }
