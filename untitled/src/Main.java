@@ -13,6 +13,15 @@ class BankAccount {
     String customerID;
 
     void deposit (int amount) {
-        balance += amount;
+        if (amount != 0) {
+            balance += amount;
+            previousTransactions = amount;
+        }
     }
+    void withdrawl (int amount) {
+        if (amount != 0) {
+            balance -= amount;
+            previousTransactions = amount;
+        }
+
 }
