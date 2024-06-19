@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       System.out.print("Hello and welcome!");
-
+       BankAccount user1 = new BankAccount("Jahid","1");
+        user1.showMenu();
 
     }
 }
